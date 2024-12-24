@@ -4,7 +4,7 @@ rock = '''
     _______
 ---'   ____)
       (_____)
-      (_____)
+      (_____) Rock
       (____)
 ---.__(___)
 '''
@@ -13,7 +13,7 @@ paper = '''
     _______
 ---'   ____)____
           ______)
-          _______)
+          _______) Paper
          _______)
 ---.__________)
 '''
@@ -22,12 +22,12 @@ scissors = '''
     _______
 ---'   ____)____
           ______)
-       __________)
+       __________) Scissors
       (____)
 ---.__(___)
 '''
 game_images = [rock, paper, scissors]
-game_rounds = 0
+game_round = 0
 
 
 def play_game():
@@ -52,16 +52,16 @@ def play_game():
         print("You win!")
         user_score += 1
     elif your_choice == "1" and computer_choice == rock:
-        print("you win!")
+        print("You win!")
         user_score += 1
     elif your_choice == "1" and computer_choice == scissors:
         print("You lose")
         computer_score += 1
     elif your_choice == "2" and computer_choice == rock:
-        print("you lose")
+        print("You lose")
         computer_score += 1
     elif your_choice == "2" and computer_choice == paper:
-        print("you win")
+        print("You win!")
         user_score += 1
     else:
         print("Draw")
@@ -69,7 +69,8 @@ def play_game():
     print(f"User score is {user_score}")
     print(f"Computer score is {computer_score}")
 
-while game_rounds <= 10:
-    game_rounds += 1
+while game_round <= 10:
+    print(f"Welcome to Rock, Paper or Scissors, Round {game_round}/10")
+    game_round += 1
     play_game()
     
